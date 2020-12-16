@@ -63,11 +63,11 @@ public class DocSnippets {
         this.db = db;
     }
 
-    void runAll() {
+    void runAll() {//ここで一括ですべてのメソッドを動かすのでこれを読みだせばデータベース関連のやつが動く
         Log.d(TAG, "================= BEGIN RUN ALL ===============");
 
         // Write example data
-        exampleData();
+
         exampleDataCollectionGroup();
 
         // Run all other methods
@@ -128,7 +128,7 @@ public class DocSnippets {
         deleteCollection(db.collection(path), 50, EXECUTOR);
     }
 
-    public void setup() {
+    public void setup() {//データベースを使えるようにしている。
         // [START get_firestore_instance]
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         // [END get_firestore_instance]
@@ -139,7 +139,7 @@ public class DocSnippets {
                 .build();
         db.setFirestoreSettings(settings);
         // [END set_firestore_settings]
-    }
+    }//データベースを使えるようにしている。
 
     public void setupCacheSize() {
         // [START fs_setup_cache]
@@ -163,18 +163,18 @@ public class DocSnippets {
                 .add(user)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
-                    public void onSuccess(DocumentReference documentReference) {
+                    public void onSuccess(DocumentReference documentReference) {//成功したときの処理
                         Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
-                    public void onFailure(@NonNull Exception e) {
+                    public void onFailure(@NonNull Exception e) {//失敗したときの処理
                         Log.w(TAG, "Error adding document", e);
                     }
                 });
         // [END add_ada_lovelace]
-    }
+    }//データの追加方法１
 
 
     public void addAlanTuring() {
@@ -202,13 +202,11 @@ public class DocSnippets {
                     }
                 });
         // [END add_alan_turing]
-    }
+    }//データの追加方法２
 
-    public void getAllUsers() {
+    public void getAllUsers() {//userにかかれているデータを取得する
         // [START get_all_users]
-        db.collection("users")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        db.collection("users").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
@@ -221,7 +219,7 @@ public class DocSnippets {
                     }
                 });
         // [END get_all_users]
-    }
+    }//データベースのコンテンツを取得
 
     public void listenForUsers() {
         // [START listen_for_users]
@@ -255,7 +253,7 @@ public class DocSnippets {
 
     public void collectionReference() {
         // [START collection_reference]
-        CollectionReference usersCollectionRef = db.collection("users");
+        CollectionReference usersCollectionRef = db.collection("users");//userに接続している。
         // [END collection_reference]
     }
 
@@ -729,7 +727,7 @@ public class DocSnippets {
         // [END listen_with_metadata]
     }
 
-    public void getMultipleDocs() {
+    public void getMultipleDocs() {//クエリを実行して取得している。
         // [START get_multiple]
         db.collection("cities")
                 .whereEqualTo("capital", true)
@@ -855,7 +853,7 @@ public class DocSnippets {
 
     public void detachListener() {
         // [START detach_listener]
-        Query query = db.collection("cities");
+        Query query = db.collection("cities");//つなげるためのクエリ
         ListenerRegistration registration = query.addSnapshotListener(
                 new EventListener<QuerySnapshot>() {
                     // [START_EXCLUDE]
@@ -897,56 +895,6 @@ public class DocSnippets {
         // [END handle_listen_errors]
     }
 
-    public void exampleData() {
-        // [START example_data]
-        CollectionReference cities = db.collection("cities");
-
-        Map<String, Object> data1 = new HashMap<>();
-        data1.put("name", "San Francisco");
-        data1.put("state", "CA");
-        data1.put("country", "USA");
-        data1.put("capital", false);
-        data1.put("population", 860000);
-        data1.put("regions", Arrays.asList("west_coast", "norcal"));
-        cities.document("SF").set(data1);
-
-        Map<String, Object> data2 = new HashMap<>();
-        data2.put("name", "Los Angeles");
-        data2.put("state", "CA");
-        data2.put("country", "USA");
-        data2.put("capital", false);
-        data2.put("population", 3900000);
-        data2.put("regions", Arrays.asList("west_coast", "socal"));
-        cities.document("LA").set(data2);
-
-        Map<String, Object> data3 = new HashMap<>();
-        data3.put("name", "Washington D.C.");
-        data3.put("state", null);
-        data3.put("country", "USA");
-        data3.put("capital", true);
-        data3.put("population", 680000);
-        data3.put("regions", Arrays.asList("east_coast"));
-        cities.document("DC").set(data3);
-
-        Map<String, Object> data4 = new HashMap<>();
-        data4.put("name", "Tokyo");
-        data4.put("state", null);
-        data4.put("country", "Japan");
-        data4.put("capital", true);
-        data4.put("population", 9000000);
-        data4.put("regions", Arrays.asList("kanto", "honshu"));
-        cities.document("TOK").set(data4);
-
-        Map<String, Object> data5 = new HashMap<>();
-        data5.put("name", "Beijing");
-        data5.put("state", null);
-        data5.put("country", "China");
-        data5.put("capital", true);
-        data5.put("population", 21500000);
-        data5.put("regions", Arrays.asList("jingjinji", "hebei"));
-        cities.document("BJ").set(data5);
-        // [END example_data]
-    }
 
     public void exampleDataCollectionGroup() {
         // [START fs_collection_group_query_data_setup]
@@ -1007,30 +955,26 @@ public class DocSnippets {
     public void simpleQueries() {
         // [START simple_queries]
         // Create a reference to the cities collection
-        CollectionReference citiesRef = db.collection("cities");
+        CollectionReference citiesRef = db.collection("cities");//citiesに接続している。
 
         // Create a query against the collection.
-        Query query = citiesRef.whereEqualTo("state", "CA");
+        Query query = citiesRef.whereEqualTo("state", "CA");//州がCAになっているものを返している。
+        //ここのやつがFirebaseからその任意の階の端末情報を取得することができるクエリだと考えている。
         // [END simple_queries]
 
         // [START simple_query_capital]
-        Query capitalCities = db.collection("cities").whereEqualTo("capital", true);
+        Query capitalCities = db.collection("cities").whereEqualTo("capital", true);//すべての首都を返している
+        //ここでランキングをつけるためのポイントを取得できたらよいかもしれない
         // [END simple_query_capital]
 
         // [START example_filters]
         citiesRef.whereEqualTo("state", "CA");
-        citiesRef.whereLessThan("population", 100000);
+        citiesRef.whereLessThan("population", 100000);//それ以下かそれ以上の人口を取得していると思う
         citiesRef.whereGreaterThanOrEqualTo("name", "San Francisco");
         // [END example_filters]
-    }
+    }//いろいろなクエリが書かれていて任意の情報を...
 
-    public void arrayContainsQueries() {
-        // [START array_contains_filter]
-        CollectionReference citiesRef = db.collection("cities");
 
-        citiesRef.whereArrayContains("regions", "west_coast");
-        // [END array_contains_filter]
-    }
 
     public void compoundQueries() {
         CollectionReference citiesRef = db.collection("cities");
@@ -1316,13 +1260,13 @@ public class DocSnippets {
         // [END update_with_server_timestamp]
     }
 
-    public void updateDeleteField() {
+    public void updateDeleteField() {//任意の情報を消して更新しているところ
         // [START update_delete_field]
         DocumentReference docRef = db.collection("cities").document("BJ");
 
         // Remove the 'capital' field from the document
         Map<String,Object> updates = new HashMap<>();
-        updates.put("capital", FieldValue.delete());
+        updates.put("capital", FieldValue.delete());//ここで消していると考えている。
 
         docRef.update(updates).addOnCompleteListener(new OnCompleteListener<Void>() {
             // [START_EXCLUDE]
