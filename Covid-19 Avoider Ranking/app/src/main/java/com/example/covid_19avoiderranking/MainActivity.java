@@ -136,42 +136,42 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer {
             }
         });
 
-        firstFloorButton.setOnClickListener(new View.OnClickListener() {
+        secondFloorButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(secondFloorIntent);
             }
         });
 
-        firstFloorButton.setOnClickListener(new View.OnClickListener() {
+        thirdFloorButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(thirdFloorIntent);
             }
         });
 
-        firstFloorButton.setOnClickListener(new View.OnClickListener() {
+        fourthFloorButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(fourthFloorIntent);
             }
         });
 
-        firstFloorButton.setOnClickListener(new View.OnClickListener() {
+        fifthFloorButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(fifthFloorIntent);
             }
         });
 
-        firstFloorButton.setOnClickListener(new View.OnClickListener() {
+        researchFirstFloorButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(researchFirstFloorIntent);
             }
         });
 
-        firstFloorButton.setOnClickListener(new View.OnClickListener() {
+        researchSecondFloorButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(researchSecondFloorIntent);
