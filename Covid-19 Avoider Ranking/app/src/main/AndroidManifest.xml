@@ -16,6 +16,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Covid19AvoiderRanking">
+        <activity android:name=".ResearchSecondFloorActivity"></activity>
+        <activity android:name=".ResearchFirstFloorActivity" />
+        <activity android:name=".FifthFloorActivity" />
+        <activity android:name=".FourthFloorActivity" />
+        <activity android:name=".ThirdFloorActivity" />
+        <activity android:name=".SecondFloorActivity" />
+        <activity android:name=".FirstFloorActivity" />
+        <activity android:name=".RankingActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

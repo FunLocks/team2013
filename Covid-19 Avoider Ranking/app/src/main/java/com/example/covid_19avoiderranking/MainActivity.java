@@ -1,10 +1,13 @@
 package com.example.covid_19avoiderranking;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import org.altbeacon.beacon.Beacon;
 import org.altbeacon.beacon.BeaconConsumer;
@@ -98,7 +101,88 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer {
             e.printStackTrace();
         }
 
+        /*ボタンインスタンスの生成*/
+        Button rankingButton = findViewById(R.id.ranking);
+        Button firstFloorButton = findViewById(R.id.firstFloor);
+        Button secondFloorButton = findViewById(R.id.secondFloor);
+        Button thirdFloorButton = findViewById(R.id.thirdFloor);
+        Button fourthFloorButton = findViewById(R.id.fourthFloor);
+        Button fifthFloorButton = findViewById(R.id.fifthFloor);
+        Button researchFirstFloorButton = findViewById(R.id.researchFirstFloor);
+        Button researchSecondFloorButton = findViewById(R.id.researchSecondFloor);
+
+        /*インテントインスタンス（画面遷移の処理を記述したインスタンス）の生成*/
+        Intent rankingIntent = new Intent(this, RankingActivity.class);
+        Intent firstFloorIntent = new Intent(this, FirstFloorActivity.class);
+        Intent secondFloorIntent = new Intent(this, SecondFloorActivity.class);
+        Intent thirdFloorIntent = new Intent(this, ThirdFloorActivity.class);
+        Intent fourthFloorIntent = new Intent(this, FourthFloorActivity.class);
+        Intent fifthFloorIntent = new Intent(this, FifthFloorActivity.class);
+        Intent researchFirstFloorIntent = new Intent(this, ResearchFirstFloorActivity.class);
+        Intent researchSecondFloorIntent = new Intent(this, ResearchSecondFloorActivity.class);
+
+        /* 画面遷移　RankingActivityへ */
+        rankingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(rankingIntent);
+            }
+        });
+
+        firstFloorButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(firstFloorIntent);
+            }
+        });
+
+        firstFloorButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(secondFloorIntent);
+            }
+        });
+
+        firstFloorButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(thirdFloorIntent);
+            }
+        });
+
+        firstFloorButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(fourthFloorIntent);
+            }
+        });
+
+        firstFloorButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(fifthFloorIntent);
+            }
+        });
+
+        firstFloorButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(researchFirstFloorIntent);
+            }
+        });
+
+        firstFloorButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(researchSecondFloorIntent);
+            }
+        });
+
 
     }
 
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
+    }
 }
