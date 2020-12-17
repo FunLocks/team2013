@@ -1,4 +1,5 @@
 package com.example.covid_19avoiderranking;
+
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -71,12 +72,11 @@ public class DocSnippets {
         exampleDataCollectionGroup();
 
         // Run all other methods
-        addAdaLovelace();
-        addAlanTuring();
+
+
         getAllUsers();
         listenForUsers();
         docReference();
-        collectionReference();
         subcollectionReference();
         setDocument();
         dataTypes();
@@ -120,8 +120,8 @@ public class DocSnippets {
 
 
     void deleteAll() {
-        deleteCollection("cities");
-        deleteCollection("users");
+        deleteCollection("userDatabase");
+
     }
 
     private void deleteCollection(final String path) {
@@ -150,16 +150,23 @@ public class DocSnippets {
         // [END fs_setup_cache]
     }
 
-    public void addAdaLovelace() {//データの追加
+    public void addAdaLovelace(int distance,String major,String minor,int rssi,String uuid) {//ここで取得する引数をもってくる
         // [START add_ada_lovelace]
         // Create a new user with a first and last name
         Map<String, Object> user = new HashMap<>();
-        user.put("first", "Ada");
-        user.put("last", "Lovelace");
-        user.put("born", 1815);
+        user.put("Distance", distance);//put(フィールド名,値)
+        user.put("Major", major);
+        user.put("Minor", minor);
+        user.put("Point", 3);
+        user.put("Rssi", rssi);
+
+        user.put("Time",new Timestamp(new Date()));
+        user.put("Uuid",uuid);
+
+
 
         // Add a new document with a generated ID
-        db.collection("users")//userというデータベースにアクセスするための処理
+        db.collection("usersDatabase")//userというデータベースにアクセスするための処理
                 .add(user)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
@@ -177,32 +184,7 @@ public class DocSnippets {
     }//データの追加方法１
 
 
-    public void addAlanTuring() {
-        // [START add_alan_turing]
-        // Create a new user with a first, middle, and last name
-        Map<String, Object> user = new HashMap<>();
-        user.put("first", "Alan");
-        user.put("middle", "Mathison");
-        user.put("last", "Turing");
-        user.put("born", 1912);
 
-        // Add a new document with a generated ID
-        db.collection("users")
-                .add(user)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.w(TAG, "Error adding document", e);
-                    }
-                });
-        // [END add_alan_turing]
-    }//データの追加方法２
 
     public void getAllUsers() {//userにかかれているデータを取得する
         // [START get_all_users]
@@ -251,11 +233,6 @@ public class DocSnippets {
         // [END doc_reference]
     }
 
-    public void collectionReference() {
-        // [START collection_reference]
-        CollectionReference usersCollectionRef = db.collection("users");//userに接続している。
-        // [END collection_reference]
-    }
 
     public void subcollectionReference() {
         // [START subcollection_reference]
