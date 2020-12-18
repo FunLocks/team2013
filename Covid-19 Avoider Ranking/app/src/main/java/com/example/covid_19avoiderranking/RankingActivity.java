@@ -1,11 +1,21 @@
 package com.example.covid_19avoiderranking;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 public class RankingActivity extends AppCompatActivity {
 
@@ -81,5 +91,31 @@ public class RankingActivity extends AppCompatActivity {
                 startActivity(researchSecondFloorIntent);
             }
         });
+
+        /*TextView name1 = findViewById(R.id.Name1);
+        Sort(name1);*/
     }
+        /*private final FirebaseFirestore db = FirebaseFirestore.getInstance();
+        private static final String TAG = "Ranking";
+        public void Sort(TextView t) {
+        CollectionReference PRef = db.collection("pointdb");
+        PRef.orderBy("user_point").limit(10);
+        String fieldname = "user_point";
+        db.collection("pointdb")
+                .whereEqualTo(fieldname, PRef).limit(10)
+                transration.get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                Log.d(TAG, document.getId() + " => " + document.getData());
+                                t.setText((CharSequence) document.getData());
+                            }
+                        } else {
+                            Log.d(TAG, "Error getting documents: ", task.getException());
+                        }
+                    }
+                })
+    }*/
 }
