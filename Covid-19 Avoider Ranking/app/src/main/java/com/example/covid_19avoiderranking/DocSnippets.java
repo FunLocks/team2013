@@ -35,6 +35,8 @@ import com.google.firebase.firestore.Source;
 import com.google.firebase.firestore.Transaction;
 import com.google.firebase.firestore.WriteBatch;
 
+import org.altbeacon.beacon.Identifier;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -150,7 +152,7 @@ public class DocSnippets {
         // [END fs_setup_cache]
     }
 
-    public void addAdaLovelace(int distance,String major,String minor,int rssi,String uuid) {//ここで取得する引数をもってくる
+    public void addAdaLovelace(double distance, Identifier major, Identifier minor, int rssi, Identifier uuid) {//ここで取得する引数をもってくる
         // [START add_ada_lovelace]
         // Create a new user with a first and last name
         Map<String, Object> user = new HashMap<>();
