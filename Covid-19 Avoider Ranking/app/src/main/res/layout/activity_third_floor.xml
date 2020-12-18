@@ -36,11 +36,11 @@
         android:layout_marginEnd="32dp"
         android:text="Your Point"
         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-        app:layout_constraintEnd_toStartOf="@+id/yourPoint"
+        app:layout_constraintEnd_toStartOf="@+id/yourPoint3"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/yourPoint"
+        android:id="@+id/yourPoint3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -54,7 +54,7 @@
         style="?android:attr/borderlessButtonStyle" />
 
     <Button
-        android:id="@+id/firstFloor"
+        android:id="@+id/firstFloor3"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -64,57 +64,57 @@
         app:layout_constraintTop_toBottomOf="@+id/floorName" />
 
     <Button
-        android:id="@+id/secondFloor"
+        android:id="@+id/secondFloor3"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:text="2F"
-        app:layout_constraintEnd_toStartOf="@+id/thirdFloor"
-        app:layout_constraintStart_toEndOf="@+id/firstFloor"
-        app:layout_constraintTop_toTopOf="@+id/firstFloor" />
+        app:layout_constraintEnd_toStartOf="@+id/thirdFloor3"
+        app:layout_constraintStart_toEndOf="@+id/firstFloor3"
+        app:layout_constraintTop_toTopOf="@+id/firstFloor3" />
 
     <Button
-        android:id="@+id/thirdFloor"
+        android:id="@+id/thirdFloor3"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#8869C3"
         android:text="3F"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/secondFloor" />
+        app:layout_constraintTop_toTopOf="@+id/secondFloor3" />
 
     <Button
-        android:id="@+id/fourthFloor"
+        android:id="@+id/fourthFloor3"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:text="4F"
-        app:layout_constraintEnd_toStartOf="@+id/fifthFloor"
-        app:layout_constraintStart_toEndOf="@+id/thirdFloor"
-        app:layout_constraintTop_toTopOf="@+id/thirdFloor" />
+        app:layout_constraintEnd_toStartOf="@+id/fifthFloor3"
+        app:layout_constraintStart_toEndOf="@+id/thirdFloor3"
+        app:layout_constraintTop_toTopOf="@+id/thirdFloor3" />
 
     <Button
-        android:id="@+id/fifthFloor"
+        android:id="@+id/fifthFloor3"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:text="5F"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/fourthFloor" />
+        app:layout_constraintTop_toTopOf="@+id/fourthFloor3" />
 
     <Button
-        android:id="@+id/reseachFirstFloor"
+        android:id="@+id/researchFirstFloor3"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="R1F"
-        app:layout_constraintStart_toStartOf="@+id/firstFloor"
-        app:layout_constraintTop_toBottomOf="@+id/firstFloor" />
+        app:layout_constraintStart_toStartOf="@+id/firstFloor3"
+        app:layout_constraintTop_toBottomOf="@+id/firstFloor3" />
 
     <Button
-        android:id="@+id/reserchSecondFloor"
+        android:id="@+id/researchSecondFloor3"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:text="R2F"
-        app:layout_constraintStart_toStartOf="@+id/secondFloor"
-        app:layout_constraintTop_toTopOf="@+id/reseachFirstFloor" />
+        app:layout_constraintStart_toStartOf="@+id/secondFloor3"
+        app:layout_constraintTop_toTopOf="@+id/researchFirstFloor3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
