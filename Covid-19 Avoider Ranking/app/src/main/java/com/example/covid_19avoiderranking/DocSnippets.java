@@ -132,7 +132,7 @@ public class DocSnippets {
 
     public void setup() {//データベースを使えるようにしている。
         // [START get_firestore_instance]
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        //FirebaseFirestore db = FirebaseFirestore.getInstance();
         // [END get_firestore_instance]
 
         // [START set_firestore_settings]
@@ -168,20 +168,21 @@ public class DocSnippets {
 
 
         // Add a new document with a generated ID
-        db.collection("usersDatabase").document("Database")//userというデータベースにアクセスするための処理
-                .set(user)
-                /*.addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+        setup();
+        db.collection("usersDatabase")//.document("Database")//userというデータベースにアクセスするための処理
+                .add(user)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {//成功したときの処理
                         Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
                     }
-                })*/
+                })/*
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
                         Log.d(TAG, "DocumentSnapshot successfully written!");
                     }
-                })
+                })*/
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {//失敗したときの処理

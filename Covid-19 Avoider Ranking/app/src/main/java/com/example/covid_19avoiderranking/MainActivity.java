@@ -141,8 +141,7 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer {
                             + beacon.getRssi() + ", TxPower:" + beacon.getTxPower() + ", Distance:"
                             + beacon.getDistance());
 
-                    database.addAdaLovelace(beacon.getDistance(), beacon.getId2(), beacon.getId3(),
-                            beacon.getRssi(), beacon.getId1());
+                    database.addAdaLovelace(beacon.getDistance(), beacon.getId2(), beacon.getId3(), beacon.getRssi(), beacon.getId1());
                 }
             }
         });
