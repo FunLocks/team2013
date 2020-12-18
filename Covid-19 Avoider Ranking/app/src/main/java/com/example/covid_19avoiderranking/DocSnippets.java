@@ -168,12 +168,18 @@ public class DocSnippets {
 
 
         // Add a new document with a generated ID
-        db.collection("usersDatabase")//userというデータベースにアクセスするための処理
-                .add(user)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+        db.collection("usersDatabase").document("Database")//userというデータベースにアクセスするための処理
+                .set(user)
+                /*.addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {//成功したときの処理
                         Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+                    }
+                })*/
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d(TAG, "DocumentSnapshot successfully written!");
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
