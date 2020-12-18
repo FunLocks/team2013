@@ -6,4 +6,115 @@
     android:layout_height="match_parent"
     tools:context=".SecondFloorActivity">
 
+    <TextView
+        android:id="@+id/floorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="2F"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/second_floor" />
+
+    <TextView
+        android:id="@+id/yourPointHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Your Point"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        app:layout_constraintEnd_toStartOf="@+id/yourPoint"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/yourPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="?android:attr/borderlessButtonStyle" />
+
+    <Button
+        android:id="@+id/firstFloor"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="1F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floorName" />
+
+    <Button
+        android:id="@+id/secondFloor"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#8869C3"
+        android:text="2F"
+        app:layout_constraintEnd_toStartOf="@+id/thirdFloor"
+        app:layout_constraintStart_toEndOf="@+id/firstFloor"
+        app:layout_constraintTop_toTopOf="@+id/firstFloor" />
+
+    <Button
+        android:id="@+id/thirdFloor"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="3F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/secondFloor" />
+
+    <Button
+        android:id="@+id/fourthFloor"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="4F"
+        app:layout_constraintEnd_toStartOf="@+id/fifthFloor"
+        app:layout_constraintStart_toEndOf="@+id/thirdFloor"
+        app:layout_constraintTop_toTopOf="@+id/thirdFloor" />
+
+    <Button
+        android:id="@+id/fifthFloor"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="5F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fourthFloor" />
+
+    <Button
+        android:id="@+id/reseachFirstFloor"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="R1F"
+        app:layout_constraintStart_toStartOf="@+id/firstFloor"
+        app:layout_constraintTop_toBottomOf="@+id/firstFloor" />
+
+    <Button
+        android:id="@+id/reserchSecondFloor"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="R2F"
+        app:layout_constraintStart_toStartOf="@+id/secondFloor"
+        app:layout_constraintTop_toTopOf="@+id/reseachFirstFloor" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
