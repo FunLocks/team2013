@@ -20,7 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="823e9f0a-c56a-497b-9ad6-5d500f4fee29" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Covid-19 Avoider Ranking/app/src/main/java/com/example/covid_19avoiderranking/RankingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Covid-19 Avoider Ranking/app/src/main/java/com/example/covid_19avoiderranking/RankingActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Covid-19 Avoider Ranking/app/src/main/java/com/example/covid_19avoiderranking/Ranking.java" beforeDir="false" afterPath="$PROJECT_DIR$/Covid-19 Avoider Ranking/app/src/main/java/com/example/covid_19avoiderranking/Ranking.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,33 +67,33 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="195" y="32" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608292867339">
+    <state x="195" y="32" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608293194003">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="195" y="32" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1608292867339" />
-    <state x="92" y="92" width="1182" height="544" key="AVDManager" timestamp="1608293136792">
+    <state x="195" y="32" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1608293194003" />
+    <state x="92" y="92" width="1182" height="544" key="AVDManager" timestamp="1608293982779">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="92" y="92" width="1182" height="544" key="AVDManager/0.0.1366.728@0.0.1366.728" timestamp="1608293136792" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1608131738287">
+    <state x="92" y="92" width="1182" height="544" key="AVDManager/0.0.1366.728@0.0.1366.728" timestamp="1608293982779" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1608300650100">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1608131738287" />
-    <state x="362" y="66" key="RollbackChangesDialog" timestamp="1608273997610">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1608300650100" />
+    <state x="362" y="66" key="RollbackChangesDialog" timestamp="1608294165125">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="362" y="66" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1608273997610" />
+    <state x="362" y="66" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1608294165125" />
     <state x="383" y="18" key="SettingsEditor" timestamp="1608096204411">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="383" y="18" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1608096204411" />
-    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608276871928">
+    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608309486061">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1608276871928" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1608190508457">
+    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1608309486061" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1608293260471">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1608190508457" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1608293260471" />
   </component>
 </project>
