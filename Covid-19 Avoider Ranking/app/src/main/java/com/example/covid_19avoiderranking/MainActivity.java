@@ -9,6 +9,8 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import org.altbeacon.beacon.Beacon;
 import org.altbeacon.beacon.BeaconConsumer;
 import org.altbeacon.beacon.BeaconManager;
@@ -23,7 +25,8 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer {
     private BeaconManager beaconManager;
     //iBeacon認識のためのフォーマット設定
     private static final String IBEACON_FORMAT ="m:2-3=0215,i:4-19,i:20-21,i:22-23,p:24-24";
-
+    private FirebaseFirestore db =FirebaseFirestore.getInstance();
+    DocSnippets database = new DocSnippets(db);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
